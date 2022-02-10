@@ -1,0 +1,48 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: wanglong
+ * @Date: 2021-01-22 15:29:49
+ * @LastEditors: wanglong
+ * @LastEditTime: 2022-02-10 16:28:02
+ * @* : 博虹出品，抄袭必究😄
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta base="admin">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>观山湖妇幼保健院</title>
+
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+
+  <script>
+    function changeMargin() {
+      const screenWidth = window.screen.width //获取当前屏幕宽度
+      const pxToDp = elePx => (screenWidth * elePx) / 375; //计算设置成多像素
+      document.querySelector('html').style.fontSize = pxToDp(15) + 'px'
+    }
+    changeMargin()
+    window.onresize = function () {
+      changeMargin();
+    };
+
+  </script>
+</body>
+
+</html>
