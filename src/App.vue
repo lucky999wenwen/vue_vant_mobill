@@ -1,7 +1,7 @@
 <!--
  * @Author: seven
  * @Date: 2020-11-06 14:51:27
- * @LastEditTime: 2022-03-16 16:05:29
+ * @LastEditTime: 2022-03-17 09:21:05
  * @LastEditors: wanglong
  * @Description: 
  * @FilePath: \BH_Middle_ground\OrganizationManger\src\App.vue
@@ -51,12 +51,6 @@ export default {
 </script>
 <style lang="scss">
 @import "~@/assets/style/computed.scss";
-@for $i from $mineenWidth through $maxWidth {
-  @media only screen and(width: #{$i}px) {
-    @include edit-swidth($i);
-  }
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

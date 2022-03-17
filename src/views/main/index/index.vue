@@ -4,7 +4,7 @@
  * @Author: wanglong
  * @Date: 2022-02-10 16:11:00
  * @LastEditors: wanglong
- * @LastEditTime: 2022-03-16 16:06:32
+ * @LastEditTime: 2022-03-17 09:29:35
  * @* : 博虹出品，抄袭必究😄
 -->
 <template>
@@ -74,7 +74,6 @@ export default {
     edit() {
       // const obj = { ...this.obj };
       this.obj.a.b.value = this.obj.a.b.value + 1;
-      console.log(this.obj);
       // console.log(obj);
       // this.obj = obj;
     },
@@ -84,59 +83,69 @@ export default {
 
 <style lang="scss" scoped>
 @import "~@/assets/style/computed.scss";
-.box {
-  .header {
-    height: pxTo(297);
-    height: column-width();
-    background-image: url("../../../assets/image/header-bj.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .b1 {
-    height: pxTo(109);
-    background: #fff;
-    text-align: left;
-    padding-left: pxTo(30);
-    display: flex;
-    align-items: center;
-    > span {
-      width: pxTo(6);
-      height: pxTo(32);
-      background: linear-gradient(0deg, #f15792 0%, #f07ead 100%);
-      border-radius: 3px;
-      display: inline-block;
+@for $i from $mineenWidth through $maxWidth {
+  @media only screen and(width: #{$i}px) {
+    @include edit-swidth($i);
+    body {
+      color: $i;
     }
-    .title {
-      font-size: pxTo(32);
-      font-family: Source Han Sans CN;
-      font-weight: 500;
-      color: #2b2d42;
-      margin-left: pxTo(16);
-      line-height: pxTo(9);
-    }
-  }
-  .serve {
-    padding: 0 pxTo(30);
-    display: flex;
-    .left {
-      flex: 1;
-      width: pxTo(330);
-      height: pxTo(280);
-    }
-    .right {
-      flex: 1;
-      margin-left: pxTo(30);
-      .search {
+    .box {
+      .header {
+        height: pxTo(297);
+        background-image: url("../../../assets/image/header-bj.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
-      .history {
-        margin-top: pxTo(30);
+      .b1 {
+        height: pxTo(109);
+        background: #fff;
+        text-align: left;
+        padding-left: pxTo(30);
+        display: flex;
+        align-items: center;
+        > span {
+          width: pxTo(6);
+          height: pxTo(32);
+          background: linear-gradient(0deg, #f15792 0%, #f07ead 100%);
+          border-radius: 3px;
+          display: inline-block;
+        }
+        .title {
+          font-size: pxTo(32);
+          font-family: Source Han Sans CN;
+          font-weight: 500;
+          color: #2b2d42;
+          margin-left: pxTo(16);
+          line-height: pxTo(9);
+        }
       }
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
+      .serve {
+        padding: 0 pxTo(30);
+        display: flex;
+        .left {
+          flex: 1;
+          width: pxTo(330);
+          height: pxTo(280);
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .right {
+          flex: 1;
+          margin-left: pxTo(30);
+          .history {
+            margin-top: pxTo(30);
+          }
+        }
+        img {
+          display: block;
+          width: pxTo(330);
+          height: pxTo(125);
+        }
+      }
     }
   }
 }
