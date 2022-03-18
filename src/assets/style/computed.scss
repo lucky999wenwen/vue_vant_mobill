@@ -1,15 +1,8 @@
 $designWidth: 750; //设计稿宽度,只需要更改这个就可以写和设计稿一样的值
 $screenWidth: 375; //当前设备屏幕宽度
 
-$mineenWidth: 350 !default; //需要兼容的屏幕最小宽度
-$maxWidth: 1000 !default; //需要兼容的屏幕最大宽度
 
-@mixin edit-swidth($screenWidth) {
-    $screenWidth: $screenWidth !global;
-}
-
-
-@function pxTo($elePx) {
-    $remSize: (($screenWidth / $designWidth) * $elePx);
-    @return #{$remSize}px;
+@function pxToRem($px) {
+	$item: $designWidth / 10;
+	@return  #{$px/$item}rem; 
 }

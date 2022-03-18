@@ -4,7 +4,7 @@
  * @Author: wanglong
  * @Date: 2021-01-22 15:29:49
  * @LastEditors: wanglong
- * @LastEditTime: 2022-03-17 09:19:03
+ * @LastEditTime: 2022-03-18 10:25:20
  * @* : 博虹出品，抄袭必究😄
 -->
 <!DOCTYPE html>
@@ -42,6 +42,22 @@
     //   changeMargin();
     // };
 
+       //获取屏幕宽度(viewport)
+    let htmlWidth = document.documentElement.clientWidth ||
+    document.body.clientWidth;
+    //获取htmlDom
+    let htmlDom = document.getElementsByTagName('html')[0];
+    //设置html的font-size
+    htmlDom.style.fontSize = htmlWidth/10+'px';
+    
+    window.addEventListener('resize',(e)=>{
+      let htmlWidth = document.documentElement.clientWidth ||
+      document.body.clientWidth;
+      //获取htmlDom
+      let htmlDom = document.getElementsByTagName('html')[0];
+      //设置html的font-size
+      htmlDom.style.fontSize = htmlWidth/10+'px';
+    })
   </script>
 </body>
 

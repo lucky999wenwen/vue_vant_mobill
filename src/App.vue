@@ -1,7 +1,7 @@
 <!--
  * @Author: seven
  * @Date: 2020-11-06 14:51:27
- * @LastEditTime: 2022-03-17 09:21:05
+ * @LastEditTime: 2022-03-18 10:59:49
  * @LastEditors: wanglong
  * @Description: 
  * @FilePath: \BH_Middle_ground\OrganizationManger\src\App.vue
@@ -50,7 +50,9 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "~@/assets/style/computed.scss";
+html {
+	font-size: 10vw;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
