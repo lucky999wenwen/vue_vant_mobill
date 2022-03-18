@@ -4,7 +4,7 @@
  * @Author: wanglong
  * @Date: 2022-02-10 16:11:00
  * @LastEditors: wanglong
- * @LastEditTime: 2022-03-17 09:29:35
+ * @LastEditTime: 2022-03-18 09:25:41
  * @* : 博虹出品，抄袭必究😄
 -->
 <template>
@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+
     <!-- <button @click="edit">修改一下{{ obj.a.b.value }}</button>
     <Demo /> -->
   </div>
@@ -40,6 +41,8 @@ export default {
   },
   data() {
     return {
+      name: "123",
+      body: "567",
       obj: {
         a: {
           b: {
